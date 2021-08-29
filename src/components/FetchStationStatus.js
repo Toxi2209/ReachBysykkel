@@ -31,7 +31,7 @@ export default class FetchStationStatus extends React.Component {
       <div>
         {this.state.station.map((station) => (
             <ul key={station.station_id}>
-                <div>Ledige Docks: {station.num_docks_available} </div>
+                <div>Ledige Låser: {station.num_docks_available} </div>
                <div> Ledige Sykkler: {station.num_bikes_available} </div>
                
             </ul>

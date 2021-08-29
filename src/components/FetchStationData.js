@@ -30,7 +30,7 @@ export default class FetchStationData extends React.Component {
       <div>
         {this.state.station.map((station) => (
             <ul key={station.station_id}>
-              <div style={{fontWeight: "bold"}}>Name: {station.name}</div>
+              <div style={{fontWeight: "bold"}}>Navn: {station.name}</div>
               <div>Stasjon id: {station.station_id}</div>
             </ul>
         ))}
