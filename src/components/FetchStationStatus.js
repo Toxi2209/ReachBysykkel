@@ -2,6 +2,7 @@ import React from "react";
 import "./FetchStationStatus.css"
 
 
+
 export default class FetchStationStatus extends React.Component {
   state = {
     loading: true,
@@ -31,7 +32,8 @@ export default class FetchStationStatus extends React.Component {
         {this.state.station.map((station) => (
             <ul key={station.station_id}>
                 <div>Ledige Docks: {station.num_docks_available} </div>
-               <div>Ledige sykler:{station.num_bikes_available}</div>
+               <div> Ledige Sykkler: {station.num_bikes_available} </div>
+               
             </ul>
  
         ))}

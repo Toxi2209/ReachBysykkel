@@ -1,11 +1,14 @@
 import React from 'react'
+
+import { FaBiking } from 'react-icons/fa';
 import './Header.css';
 
 function Header() {
   return (
     <div>
-      <h1>BySykkler</h1>
+      <FaBiking size="2em" color="green" style={{ paddingTop:"2em", paddingLeft: "3em"}}/> <h1>BySykkler</h1>
     </div>
+    
   )
 }
 
