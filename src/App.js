@@ -12,9 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <div class="Main">
-        <div class="Data"><FetchStationData/></div>
-        <div class="Status"><FetchStationStatus/></div>
+        <div className="Main">
+        <div className="Data"><FetchStationData/></div>
+        <div className="Status"><FetchStationStatus/></div>
         </div>
       </div>
     );
