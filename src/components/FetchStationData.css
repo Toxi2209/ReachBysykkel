@@ -3,3 +3,13 @@ ul {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
+
+li {
+  align-content: center;
+  display: flex;
+
+}
+
+div {
+  margin: 1em;
+}

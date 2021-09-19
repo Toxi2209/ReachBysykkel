@@ -10,13 +10,14 @@ export default class FetchStationData extends React.Component {
 
 
   async componentDidMount() {
-    const url = "https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json";
+    const url = " http://localhost:8080/api/v1/stations/";
     const response = await fetch(url, {
       method: 'GET',
       headers: { "Client-Identifier": "mittfirma-reiseplanlegger" }
     });
     const data = await response.json();
-    this.setState({ station: data.data.stations, loading: false });
+    console.log(data)
+    this.setState({ station: data, loading: false });
   }
   
 
@@ -34,8 +35,11 @@ export default class FetchStationData extends React.Component {
         {this.state.station.map((station) => (
             <li key={station.station_id}>
               <div style={{fontWeight: "bold"}}>Navn: {station.name}</div>
-              <div>Stasjon id: {station.station_id}</div> <br />
+              <div>Stasjon Id: {station.station_id}</div> <br />
+              <div>Ledige Sykler: {station.numBikesAvailable}</div> <br />
+              <div>Ledige Docks: {station.numDockAvailable}</div> <br />
             </li>
+            
         ))}
       </ul>
     );
